@@ -1,0 +1,286 @@
+/* NAVBAR */
+
+#navigationbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #f6f6f6e3;
+    box-shadow: -1px 0px 7px 1px rgba(0, 0, 0, 0.29);
+    height: 80px;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-family: 'Bitter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #333333;
+    transition: 0.3s ease;
+}
+
+.logo {
+    width: 80px;
+    padding: 3px;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #fFb0b0;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #2ab138;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+.fa-times {
+    display: none;
+}
+
+.open .fa-times {
+    display: block;
+}
+
+.open .fa-bars {
+    display: none;
+}
+
+.open .navbar {
+    transform: translateX(0);
+}
+
+.open #navigationbar::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* FIN NAVBAR */
+
+
+/* BODY */
+
+.container {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background: url(../image/connexion.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Josefin Sans';
+}
+
+h3 {
+    font-family: 'Bitter';
+}
+
+.btn {
+    font-family: 'Bitter';
+}
+
+form {
+    padding: 5em;
+}
+
+.Inscription {
+    color: #ffffff;
+    border: solid black 1px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.20);
+    padding: 3em;
+    margin: 3em;
+}
+
+.Connexion {
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.20);
+    border: solid black 1px;
+    padding: 3em;
+    margin: 3em;
+}
+
+
+/* ********** FOOTER CSS *********** */
+
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #f6f6f6e3;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: -1px 0px 7px 1px rgba(0, 0, 0, 0.29);
+    font-family: 'Josefin Sans';
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+footer .footer-content .sec {
+    margin-right: 30px;
+}
+
+footer .footer-content .sec.aboutus {
+    width: 40%;
+}
+
+footer .footer-content h2 {
+    position: relative;
+    color: #333333;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-family: 'Bitter';
+}
+
+footer .footer-content h2:before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #2ab138;
+}
+
+footer p {
+    color: #333333;
+}
+
+.sci {
+    margin-top: 20px;
+    display: flex;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.sci li a .uil {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.quickLinks {
+    position: relative;
+    width: 25%;
+}
+
+.quickLinks ul li {
+    list-style: none;
+}
+
+.quickLinks ul li a {
+    color: #333333;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.quickLinks ul li a:hover {
+    color: #fFb0b0;
+}
+
+.contact {
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+
+.contact .info {
+    position: relative;
+}
+
+.contact .info li {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.contact .info li span:nth-child(1) {
+    color: #333333;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contact .info li span {
+    color: #333333;
+}
+
+.contact .info li a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.contact .info li a:hover {
+    color: #fFb0b0;
+}
+
+.copyrightText {
+    width: 100%;
+    background: #f6f6f6e3;
+    padding: 8px 100px;
+    text-align: center;
+    color: #333333;
+}
+
+@media (max-width: 991px) {
+    footer {
+        padding: 40px;
+    }
+    footer .footer-content {
+        flex-direction: column;
+    }
+    footer .footer-content .sec {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    footer .footer-content .sec.sec.aboutus,
+    .quickLinks,
+    .contact {
+        width: 100%;
+    }
+    .copyrightText {
+        padding: 8px 40px;
+    }
+}
